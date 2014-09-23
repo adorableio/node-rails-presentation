@@ -1,0 +1,7 @@
+{
+  "name": "node-rails-presentation",
+  "version": "0.0.1",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}

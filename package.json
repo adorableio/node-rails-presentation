@@ -1,0 +1,33 @@
+{
+  "name": "node-rails-presentation",
+  "version": "0.0.1",
+  "description": "Presentation (and sample app) for demonstrating using node as a front-end asset manager in rails",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/bower install"
+  },
+  "author": "Kevin Altman <kevin@itsthatguy.com>",
+  "license": "MIT",
+  "private": "true",
+  "dependencies": {},
+  "devDependencies": {
+    "bespoke": "^1.0.0",
+    "bespoke-bullets": "^1.0.0",
+    "bespoke-forms": "^1.0.0",
+    "bespoke-hash": "^1.0.0",
+    "bespoke-keys": "^1.0.0",
+    "bespoke-progress": "^1.0.0",
+    "bespoke-scale": "^1.0.0",
+    "bespoke-state": "^1.0.0",
+    "bespoke-theme-cube": "^1.0.0",
+    "bespoke-touch": "^1.0.0",
+    "bower": "^1.3.10",
+    "browserify": "^5.9.1",
+    "coffeeify": "^0.7.0",
+    "debowerify": "^0.7.1"
+  }
+}
