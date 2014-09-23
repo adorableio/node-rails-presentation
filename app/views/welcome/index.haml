@@ -1,51 +1,139 @@
 %article
 
   %section
-    %h1 Hello World
+    %h1 Imagine a world without Bundler
+    %h3= link_to '@itg', 'https://twitter.com/itg'
+    =image_tag 'itg.jpg', class: 'avatar'
+
+
+  %section(data-bespoke-state='aqua')
+    %h2 Time to install a gem
 
   %section
-    %h2 Keyboard Interaction
-    %h3 Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a>
-
-  %section
-    %h2 Bullet List
-    %h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
+    %h3.bullet Let's install haml!
     %ul
-      %li Bullet 1
-      %li Bullet 2
-      %li Bullet 3
+      %li Open your browser
+      %li Search google for 'haml gem'
+      %li Scroll around until you find the official haml website
+      %li Find whatever obscure link exists for downloading haml
+      %li Download the .zip file
+      %li Unzip it
+      %li Copy all the unzipped files
+      %li Open your project folder
+      %li Navigate to your /vendor folder and paste your files
 
-  %section
-    %h2 Syntax Highlighting
-    %h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
-    %pre
-      %code.language-javascript
-        :escaped
-          bespoke.from('article', [
-            classes(),
-            keys(),
-            touch(),
-            bullets('li, .bullet')
-          ]);
+  - success_image_class = ['pug', 'bmo']
+  - 2.times do |version|
+    %section(data-bespoke-state="success #{success_image_class[version]}")
+      %h1 SUCCESSSs!!!
 
-  %section(data-bespoke-hash='named-route')
-    %h2 Named Route
-    %h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-    %p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
+    %section(data-bespoke-state='red')
+      %h1 Found a bug!
 
-  %section(data-bespoke-state='emphatic')
-    %h2 Emphatic Slide!
-    %h3 Powered by <a href="https://github.com/markdalgleish/bespoke-state">bespoke-state</a>
+    %section(data-bespoke-state='yellow')
+      %h2 Time to update to haml v4.3.#{version+1}
 
-  %section
-    %h2.bullet Just the beginning...
-    %br
+    %section(data-bespoke-state='yellow')
+      %h3.bullet Let's <strike>install</strike> update haml!
+      %ul
+        %li Open your browser
+        %li Search google for 'haml gem'
+        %li Scroll around until you find the official haml website
+        %li Find whatever obscure link exists for downloading haml
+        %li Download the .zip file
+        %li Unzip it
+        %li Copy all the unzipped files
+        %li Open your project folder
+        %li Navigate to your /vendor folder and paste your files
+
+  %section(data-bespoke-state='success jack')
+    %h1 success...
+
+  %section(data-bespoke-state='red')
+    %h1 Found a bug!
+
+  %section(data-bespoke-state='yellow')
+    %h2 Time to update to haml v4.3.3
+
+  %section(data-bespoke-state='yellow')
+    %h3.bullet Let's <strike>install</strike> update haml!
     %ul
-      %li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-      %li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-      %li Edit JavaScript in <em>'src/scripts/main.js'</em>
-    %br
+      %li Open your browser
+      %li Search google for 'haml gem'
+      %li ...
+      %li ...
+      %li
+        %br
+        %br
+        %h2 ok. you get the idea
+
+  %section
+    %h1 This <b>seriously</b> sucks
+
+  %section
+    %h2 We don't tolerate this in Rails
+
+  %section
+    %h2.bullet Why do we tolerate this on the front-end?
     %ul
       %li
-        %strong Enjoy! :)
-        %a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+        %h2.quote "Because there aren't gems for all the front-end codess, <b>dummy!</b>"
+
+  %section
+    %h1.bullet True
+    %ul
+      %li
+        %h2 ...sort of
+
+  %section(data-bespoke-state='aqua')
+    %h1 Enter <b>node.js</b>
+
+  %section(data-bespoke-state='rainbow-jake')
+    %h2.bullet With which we get...
+    %ul
+      %li NPM (<b>N</b>ode <b>P</b>ackage <b>M</b>anager)
+      %li Bower
+      %li Browserify
+
+  %section
+    %h2 <b>NPM</b> manages packages for node
+
+  %section
+    %h2 <b>Bower</b> manages front-end frameworks, libraries, assets, utilities
+
+  %section
+    %h2 <b>Browserify</b> bundles up all of your front-end dependencies
+
+  %section(data-bespoke-state='red')
+    %h2.quote "But we're using Rails, we don't need <b>node.js</b>!"
+
+  %section(data-bespoke-state='')
+    %h1 Oh, right... sorry
+
+  %section(data-bespoke-state='nope')
+    %h1 Wait... no...
+    %h2 that doesn't make sense
+
+  %section(data-bespoke-state='')
+    // For the sake of argument...
+    %h2.bullet What if I told you Bundler was written in Perl?
+    %ul
+      %li
+        %h2.quote "But we're using Rails, we don't need Bundler!"
+
+  %section(data-bespoke-state='dont-care')
+    %h1 Who cares?
+
+  %section(data-bespoke-state='aqua')
+    %h1 Time to install a front-end asset!
+
+  %section
+    %h3.bullet Let's install jquery!
+    %ul
+      %li
+        %pre.language-bash
+          %code>
+            $ npm install jquery --save-dev
+
+  %section(data-bespoke-state='success hammer')
+    %h1 SUCCCCESSSSS!!!sssd

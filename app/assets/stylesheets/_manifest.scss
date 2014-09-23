@@ -1,1 +1,9 @@
-@import 'prism/themes/prism-okaidia.css'
+// Config
+@import 'config/fonts';
+@import 'config/colors';
+@import 'config/slides';
+
+@import 'prism/themes/prism-okaidia.css';
+
+@import 'partials/type';
+@import 'partials/base';

@@ -1,0 +1,109 @@
+.bespoke-slide {
+  background: none;
+  transition: transform $slide-transition-length $slide-transition-easing
+              opacity $slide-transition-length $slide-transition-easing,
+              background $slide-transition-length $slide-transition-easing;
+  transform: translate3d(0,0,0),
+             rotateX($slide-transition-rotate-y);
+  opacity: 0;
+
+  &.bespoke-active {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+
+  &.bespoke-inactive { }
+
+  &.bespoke-before {
+    transform: rotateX($slide-transition-rotate-y * -1);
+    background-image: none;
+  }
+
+  &.bespoke-after {
+    transform: rotateX($slide-transition-rotate-y);
+    background-image: none;
+
+    h1, h2, h3, h4 {
+      &.bullet + ul {
+        max-height: 0;
+      }
+    }
+  }
+}
+
+@mixin article-state($background-color, $font-color) {
+  background: $background-color;
+  @include text-elements { color: $font-color; }
+}
+
+@mixin article-image($class, $position: 50%) {
+  background-image: image_url("#{$class}.gif");
+  background-position: unquote($position);
+  background-size: cover;
+  &:after {
+    content: '';
+    position: absolute;
+    background: rgba($black, .65);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+article {
+  @include article-state($black, $white);
+  &.aqua   { @include article-state($aqua, $black); }
+  &.blue   { @include article-state($blue, $white); }
+  &.dark   { @include article-state($black, $white); }
+  &.green  { @include article-state($green, $black); }
+  &.grey   { @include article-state($grey, $dark); }
+  &.light  { @include article-state($light-grey, $grey); }
+  &.red    { @include article-state($red, $white); }
+  &.white  { @include article-state($white, $white); }
+  &.yellow { @include article-state($yellow, $black); }
+
+  &.success {
+    @include article-image('success-top-gun');
+    &.bmo { @include article-image('success-bmo'); }
+    &.pug { @include article-image('success-pug'); }
+    &.jack { @include article-image('success-jack'); }
+    &.hammer { @include article-image('success-hammer'); }
+  }
+
+  &.rainbow-jake { @include article-image('rainbow-jake'); }
+  &.dont-care { @include article-image('dont-care'); }
+  &.nope { @include article-image('nope', '50% 60%'); }
+
+}
+
+.avatar {
+  border-radius: 1000px;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.quote {
+  @extend %light-font;
+  box-shadow: 0 0 0 2px $white;
+  font-style: italic;
+  margin-top: 1em;
+  padding: 20px 30px 30px;
+}
+
+h1, h2, h3, h4, h5 {
+  &.bullet {
+    + ul {
+      transition: opacity $slide-transition-length ease,
+                  max-height $slide-transition-length ease;
+      max-height: 300px;
+      opacity: 1;
+    }
+    &.bespoke-bullet-current + ul {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+}

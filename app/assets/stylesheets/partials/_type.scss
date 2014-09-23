@@ -1,0 +1,82 @@
+%thin-font   { font-weight: 100; }
+%light-font  { font-weight: 300; }
+%normal-font { font-weight: 400; }
+%bold-font   { font-weight: 700; }
+
+@mixin header-elements {
+  h1, h2, h3, h4, h5, h6 {
+    @content;
+  }
+}
+
+@mixin text-elements {
+  @include header-elements {
+    @content;
+  }
+  strike, p, li {
+    @content;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  @extend %light-font;
+}
+
+h1 {
+  @extend %light-font;
+}
+
+h2 {
+  @extend %light-font;
+}
+
+h3 {
+  @extend %normal-font;
+  color: $white;
+}
+
+h4 {
+  @extend %light-font;
+}
+
+h5 {
+  @extend %light-font;
+}
+
+h6 {
+  @extend %light-font;
+}
+
+p {
+  @extend %light-font;
+}
+
+strike {
+  color: $dark;
+}
+
+a {
+  color: $aqua;
+}
+
+.bespoke-slide {
+  @include text-elements {
+    transition: color 0;
+  }
+
+  &.bespoke-inactive {
+    @include text-elements {
+      transition: color $slide-transition-length $slide-transition-easing $slide-text-transition-delay;
+    }
+  }
+}
+
+@include header-elements {
+  &.thin  { @extend %thin-font; }
+  &.light { @extend %light-font; }
+}
+
+pre[class^='language-'] {
+  background-color: $dark;
+}

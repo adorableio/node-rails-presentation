@@ -1,0 +1,16 @@
+$slide-width: 640px;
+$slide-height: 480px;
+$slide-background: transparent;
+
+$slide-transition-length: .6s;
+$slide-transition-easing: ease;
+$slide-transition-rotate-y: 10deg;
+
+$slide-text-transition-delay: .6s;
+$slide-bullet-y-offset: 130px;
+
+// Safari bugs out on 3d transform-origins, so we have to fake it
+$slide-transition-nudge-x: -640px;
+
+$bullet-transition-length: .3s;
+$bullet-transition-easing: ease;
