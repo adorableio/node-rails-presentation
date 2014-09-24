@@ -16,5 +16,3 @@ gem 'spring', group: :development
 
 # Nodes
 gem 'browserify-rails'
-
-gem 'rails_12factor', group: :production
