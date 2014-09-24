@@ -23,7 +23,6 @@ body {
   @extend %light-font;
 }
 
-
 @include header-elements {
   letter-spacing: 1px;
   &.thin  { @extend %thin-font; }
