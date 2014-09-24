@@ -83,6 +83,8 @@ article {
   border-radius: 1000px;
   display: block;
   margin-bottom: .5em;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: .5em;
   width: 100px;
   height: 100px;
@@ -95,7 +97,7 @@ article {
 
 .quote {
   @extend %light-font;
-  box-shadow: 0 0 0 2px $white;
+  @include box-shadow(0 0 0 2px $white);
   font-style: italic;
   margin-top: 1em;
   padding: 20px 30px 30px;

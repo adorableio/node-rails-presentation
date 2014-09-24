@@ -85,3 +85,9 @@ dt {
 dd {
   margin-bottom: 1em;
 }
+
+u {
+  @include box-shadow(0 2px 0 $white);
+  display: inline-block;
+  text-decoration: none;
+}

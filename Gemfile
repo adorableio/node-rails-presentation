@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bourbon'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'haml-rails'
 gem 'pg'
