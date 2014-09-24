@@ -13,7 +13,7 @@
     %h3.bullet Let's install haml!
     %ul
       %li Open your browser
-      %li Search google for 'haml gem'
+      %li Search google for 'haml ruby'
       %li Scroll around until you find the official haml website
       %li Find whatever obscure link exists for downloading haml
       %li Download the .zip file
@@ -37,7 +37,7 @@
       %h3.bullet Let's <strike>install</strike> update haml!
       %ul
         %li Open your browser
-        %li Search google for 'haml gem'
+        %li Search google for 'haml ruby'
         %li Scroll around until you find the official haml website
         %li Find whatever obscure link exists for downloading haml
         %li Download the .zip file
@@ -59,7 +59,7 @@
     %h3.bullet Let's <strike>install</strike> update haml!
     %ul
       %li Open your browser
-      %li Search google for 'haml gem'
+      %li Search google for 'haml ruby'
       %li ...
       %li ...
       %li
@@ -137,3 +137,89 @@
 
   %section(data-bespoke-state='success hammer')
     %h1 SUCCCCESSSSS!!!sssd
+
+  %section(data-bespoke-state='aqua')
+    %h1 Integrating with rails
+
+  %section(data-bespoke-state='')
+    %h2 Install browserify
+    %pre.language-bash
+      %code
+        $ npm install browserify --save-dev
+    %pre.language-ruby
+      %code
+        =preserve do
+          :escaped
+            # Gemfile
+            gem 'browserify-rails'
+
+
+  %section(data-bespoke-state='yellow')
+    %h1 What about bower?
+
+  %section(data-bespoke-state='omg')
+    %h1 MORE PACKAGES!!!
+
+  %section(data-bespoke-state='')
+    %h2 Setup the bower install path
+    %pre.language-javascript
+      %code
+        =preserve do
+          :escaped
+            // .bowerrc
+            {
+              "directory": "vendor/assets/bower_components"
+            }
+
+
+  %section(data-bespoke-state='')
+    %h2 Add load paths for bower and vendor assets
+    %pre.language-ruby
+      %code
+        =preserve do
+          :escaped
+            # config/application.rb
+            config.browserify_rails.paths << [
+              '/vendor/assets/bower_components/',
+              '/vendor/assets/javascripts/'
+            ]
+
+  %section(data-bespoke-state='yellow')
+    %h1 What about deploying?
+
+  %section(data-bespoke-state='')
+    %h2 <code>rake assets:precompile</code> your way to awesome
+
+  %section(data-bespoke-state='')
+    %h2 Moar Stuff
+    %dl
+      %dt This presentation
+      %dd= link_to 'github.com/adorableio/node-rails-presentation', 'http://github.com/adorableio/node-rails-presentation'
+
+      %dt
+        We are
+        = link_to '@adorableio', 'https://twitter.com/adorableio'
+      %dd
+
+
+        .row
+          .p-25
+            = link_to '@itg', 'https://twitter.com/itg'
+            = image_tag 'us-itg.jpg', class: 'avatar small'
+
+          .p-25
+            = link_to '@jremsikjr', 'https://twitter.com/jremsikjr'
+            = image_tag 'us-jim.jpg', class: 'avatar small'
+
+          .p-25
+            = link_to '@m5rk', 'https://twitter.com/m5rk'
+            = image_tag 'us-mark.jpg', class: 'avatar small'
+
+          .p-25
+            = link_to '@rylnd', 'https://twitter.com/rylnd'
+            = image_tag 'us-ryland.jpg', class: 'avatar small'
+
+      %dt Shameless plug
+      %dd
+        = link_to 'Adorable Avatars', 'http://avatars.adorable.io'
+

@@ -75,6 +75,7 @@ article {
   &.rainbow-jake { @include article-image('rainbow-jake'); }
   &.dont-care { @include article-image('dont-care'); }
   &.nope { @include article-image('nope', '50% 60%'); }
+  &.omg { @include article-image('omg'); }
 
 }
 
@@ -83,6 +84,12 @@ article {
   display: block;
   width: 100px;
   height: 100px;
+
+  &.small {
+    margin-top: .5em;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .quote {
@@ -105,5 +112,16 @@ h1, h2, h3, h4, h5 {
       max-height: 0;
       opacity: 0;
     }
+  }
+}
+
+.p-25 {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  margin: 5px;
+  img {
+    margin: 0 auto;
   }
 }

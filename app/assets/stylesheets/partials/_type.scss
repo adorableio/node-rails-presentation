@@ -13,7 +13,7 @@
   @include header-elements {
     @content;
   }
-  strike, p, li {
+  p, li, dl {
     @content;
   }
 }
@@ -53,7 +53,7 @@ p {
 }
 
 strike {
-  color: $dark;
+  color: rgba($black, .25);
 }
 
 a {
@@ -79,4 +79,12 @@ a {
 
 pre[class^='language-'] {
   background-color: $dark;
+}
+
+dt {
+  margin: 2em 0 .5em;
+}
+
+dd {
+  margin-bottom: 1em;
 }

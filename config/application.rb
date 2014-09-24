@@ -25,6 +25,9 @@ module NodeRailsPres
     # require() with different javascript resources, including bower components
     # - Javascript assets from /vendor
     # - Packages we install from bower
-    config.browserify_rails.paths << %w(/vendor/assets/javascripts/ /vendor/assets/bower_components/)
+    config.browserify_rails.paths << %w(
+      /vendor/assets/javascripts/
+      /vendor/assets/bower_components/
+    )
   end
 end
