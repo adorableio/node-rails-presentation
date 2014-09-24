@@ -13,7 +13,7 @@
   @include header-elements {
     @content;
   }
-  p, li, dl {
+  p, li, dl, small {
     @content;
   }
 }
