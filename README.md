@@ -1,57 +1,26 @@
 # Node Rails Presentation
 
-## `Gemfile`
+## Setup
 
-```ruby
-gem 'browserify-rails'
+### Install node
+
+```bash
+brew install nodejs
 ```
 
-## `package.json`
-
-```json
-{
-  ...
-  "devDependencies": {
-    ...
-    "browserify": "^5.9.1",
-    "coffeeify": "^0.7.0",
-    "debowerify": "^0.7.1"
-}
+## Install project dependencies
+```bash
+bundle install
+# 'npm install' is currently setup to additionally run 'bower install'
+npm install
 ```
 
-## `config/application.rb`
+## Run the server
 
-```ruby
-...
-module NodeRailsPres
-  class Application < Rails::Application
-    # Tell the asset pipeline to add bower_components
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+## Gotchas
 
-    # Adds commandline options to the browserify execution
-    # - Coffeeify transform
-    # - Debowerify transform to enable easily using bower components in bowerify
-    # - Consider files with specified EXTENSION as modules
-    config.browserify_rails.commandline_options = [
-      '--transform coffeeify',
-      '--transform debowerify',
-      '--extension=\".js.coffee\"'
-    ]
+When including 3rd party css files, do not include the .css file extension or Sass will not include the file contents in your source
+- Do:  `@import 'somepath/somefile';`
 
-    # Adds paths to the browserify lookup path so that we can easily use
-    # require() with different javascript resources, including bower components
-    # - Javascript assets from /vendor
-    # - Packages we install from bower
-    config.browserify_rails.paths << %w(/vendor/assets/javascripts/ /vendor/assets/bower_components/)
-  end
-end
-
-```
-
-### `.bowerrc`
-
-```
-{
-  "directory": "vendor/assets/bower_components"
-}
-```
+You'll want to be aware of how many node packages your loading, and compiling down into your javascript. `npm dedupe` helps with this.
+- [https://www.npmjs.org/doc/cli/npm-dedupe.html](https://www.npmjs.org/doc/cli/npm-dedupe.html)
