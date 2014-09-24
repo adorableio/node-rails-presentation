@@ -2,8 +2,8 @@
 
   %section
     %h1 Imagine a world without Bundler
-    %h3= link_to '@itg', 'https://twitter.com/itg'
     =image_tag 'us-itg.jpg', class: 'avatar'
+    %h3= link_to '@itg', 'https://twitter.com/itg'
 
 
   %section(data-bespoke-state='aqua')
@@ -216,24 +216,25 @@
       %dd
         .row
           .p-25
-            = link_to '@itg', 'https://twitter.com/itg'
             = image_tag 'us-itg.jpg', class: 'avatar small'
+            = link_to '@itg', 'https://twitter.com/itg'
 
           .p-25
-            = link_to '@jremsikjr', 'https://twitter.com/jremsikjr'
             = image_tag 'us-jim.jpg', class: 'avatar small'
+            = link_to '@jremsikjr', 'https://twitter.com/jremsikjr'
 
           .p-25
-            = link_to '@m5rk', 'https://twitter.com/m5rk'
             = image_tag 'us-mark.jpg', class: 'avatar small'
+            = link_to '@m5rk', 'https://twitter.com/m5rk'
 
           .p-25
-            = link_to '@rylnd', 'https://twitter.com/rylnd'
             = image_tag 'us-ryland.jpg', class: 'avatar small'
+            = link_to '@rylnd', 'https://twitter.com/rylnd'
 
-      %dt Shameless plug
-      %dd.space
-        = link_to 'Adorable Avatars', 'http://avatars.adorable.io'
+      %dt
+        %small (shameless plug)
+        %div Adorable Avatars
+      %dd
         .row
           .p-25
             = image_tag 'http://avatars-staging.herokuapp.com/avatars/120/itg.png', class: 'avatar small'
@@ -246,3 +247,4 @@
 
           .p-25
             = image_tag 'http://avatars-staging.herokuapp.com/avatars/120/ryland.png', class: 'avatar small'
+        = link_to 'avatars.adorable.io', 'http://avatars.adorable.io'

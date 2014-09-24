@@ -82,11 +82,12 @@ article {
 .avatar {
   border-radius: 1000px;
   display: block;
+  margin-bottom: .5em;
+  margin-top: .5em;
   width: 100px;
   height: 100px;
 
   &.small {
-    margin-top: .5em;
     width: 40px;
     height: 40px;
   }
