@@ -74,10 +74,11 @@
     %h2 We don't tolerate this in Rails
 
   %section
-    %h2.bullet Why do we tolerate this on the front-end?
-    %ul
-      %li
-        %h2.quote "Because there aren't gems for all the front-end codess, <b>dummy!</b>"
+    %h2 Why do we tolerate this on the front-end?
+
+  %section
+    %h2.quote "Because there aren't gems for all the front-end codess, <b>dummy!</b>"
+    = image_tag 'http://avatars-staging.herokuapp.com/avatars/mister-Smart.png', class: 'avatar'
 
   %section
     %h1.bullet True
@@ -95,7 +96,10 @@
     %p Bower
 
   %section
-    %h2 <b>NPM</b> manages packages for node
+    %h2
+      %b NPM
+      manages
+      %u packages
 
   %section
     %h2 <b>Browserify</b> bundles up all of your front-end dependencies
@@ -106,6 +110,7 @@
 
   %section(data-bespoke-state='red')
     %h2.quote "But we're using Rails, we don't need <b>node.js</b>!"
+    = image_tag 'http://avatars-staging.herokuapp.com/avatars/naysayer.png', class: 'avatar'
 
   %section(data-bespoke-state='')
     %h1 Oh, right... sorry
@@ -116,10 +121,11 @@
 
   %section(data-bespoke-state='')
     // For the sake of argument...
-    %h2.bullet What if I told you Bundler was written in Perl?
-    %ul
-      %li
-        %h2.quote "But we're using Rails, we don't need Bundler!"
+    %h2 What if I told you Bundler was written in Perl?
+
+  %section(data-bespoke-state='')
+    %h2.quote "But we're using Rails, we don't need Bundler!"
+    = image_tag 'http://avatars-staging.herokuapp.com/avatars/mrinformed.png', class: 'avatar'
 
   %section(data-bespoke-state='dont-care')
     %h1 Who cares?
