@@ -133,7 +133,7 @@
       %li
         %pre.language-bash
           %code>
-            $ npm install jquery --save-dev
+            $ npm install jquery --save
 
   %section(data-bespoke-state='success hammer')
     %h1 SUCCCCESSSSS!!!sssd
@@ -145,7 +145,7 @@
     %h2 Install browserify
     %pre.language-bash
       %code
-        $ npm install browserify --save-dev
+        $ npm install browserify --save
     %pre.language-ruby
       %code
         =preserve do
@@ -155,7 +155,7 @@
 
 
   %section(data-bespoke-state='yellow')
-    %h1 What about bower?
+    %h1 Why bower?
 
   %section(data-bespoke-state='omg')
     %h1 MORE PACKAGES!!!
@@ -188,6 +188,10 @@
     %h1 What about deploying?
 
   %section(data-bespoke-state='')
+    %pre.language-bash
+      %code
+        =preserve do
+          $ bundle install && npm install && bower install
     %h2 <code>rake assets:precompile</code> your way to awesome
 
   %section(data-bespoke-state='')
@@ -220,6 +224,19 @@
             = image_tag 'us-ryland.jpg', class: 'avatar small'
 
       %dt Shameless plug
-      %dd
+      %dd.space
         = link_to 'Adorable Avatars', 'http://avatars.adorable.io'
+        .row
+          .p-25
+            = image_tag 'http://avatars-staging.herokuapp.com/avatars/120/itg.png', class: 'avatar small'
+
+          .p-25
+            = image_tag 'http://avatars-staging.herokuapp.com/avatars/120/jremsikjr.png', class: 'avatar small'
+
+          .p-25
+            = image_tag 'http://avatars-staging.herokuapp.com/avatars/120/m5rk.png', class: 'avatar small'
+
+          .p-25
+            = image_tag 'http://avatars-staging.herokuapp.com/avatars/120/ryland.png', class: 'avatar small'
+
 
