@@ -13,8 +13,7 @@
   "author": "Kevin Altman <kevin@itsthatguy.com>",
   "license": "MIT",
   "private": "true",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "bespoke": "^1.0.0",
     "bespoke-bullets": "^1.0.0",
     "bespoke-forms": "^1.0.0",
@@ -29,5 +28,6 @@
     "browserify": "^5.9.1",
     "coffeeify": "^0.7.0",
     "debowerify": "^0.7.1"
-  }
+  },
+  "devDependencies": {}
 }
