@@ -9,6 +9,7 @@ brew install nodejs
 ```
 
 ## Install project dependencies
+
 ```bash
 bundle install
 # 'npm install' is currently setup to additionally run 'bower install'
@@ -16,6 +17,10 @@ npm install
 ```
 
 ## Run the server
+
+```bash
+bundle exec rails s
+```
 
 ## Gotchas
 
